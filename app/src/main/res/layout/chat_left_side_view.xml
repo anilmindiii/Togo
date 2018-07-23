@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/profile_image_other_side"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/app_icon"
+            app:siBorderColor="@color/mdtp_dark_gray"
+            app:siBorderWidth="0.5dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:src="@drawable/blue_chock_img" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_45sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/other_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:layout_gravity="left"
+                    android:text="H"
+                    android:gravity="center|left"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/rounded_primary_left_chat_border"/>
+
+
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/chat_other_image_view"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/app_icon"
+                    app:siBorderColor="@color/colorPrimaryDark"
+                    app:siBorderWidth="4dp"
+                    app:siRadius="@dimen/_5sdp"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/time_ago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:text="25/12/2017 800 pm"
+                    android:layout_gravity="right"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+       <!-- <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/chat_other_image_view"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_45sdp"
+            android:layout_marginRight="@dimen/_35sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_icon"
+            android:visibility="gone"
+            app:siBorderColor="@color/colorPrimaryDark"
+            app:siBorderWidth="4dp"
+            app:siRadius="@dimen/_5sdp" />-->
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "406685131499",
+    "firebase_url": "https://togo-1f83e.firebaseio.com",
+    "project_id": "togo-1f83e",
+    "storage_bucket": "togo-1f83e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406685131499:android:c73383d651384396",
+        "android_client_info": {
+          "package_name": "com.togocourier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406685131499-klmkdirtse5fofp8so8m6bo099sppilk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.togocourier",
+            "certificate_hash": "3c0c52ad03d1a6a106b9b432327849a85489aca0"
+          }
+        },
+        {
+          "client_id": "406685131499-v6c3ia5h881i6rmbpli97ifsijp4v1sl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ9QjanZEeNZWQodI_fCttEZABP_6cg_w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406685131499-qb1530s19t37c8g67i4tnmf7pfqo5t81.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "406685131499-jhetoaoajle2qhn8e8l9qhs1fpk8k930.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mindiii.togo"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

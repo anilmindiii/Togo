@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/mySideImage"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/app_icon"
+            app:siBorderColor="@color/mdtp_dark_gray"
+            android:layout_alignParentRight="true"
+            app:siBorderWidth="0.5dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/drak_gray_chock_img"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_40sdp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_45sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:gravity="center|left">
+
+                <TextView
+                    android:id="@+id/my_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:layout_gravity="right"
+                    android:text="a"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:background="@drawable/rounded_primary_right_chat_border" />
+
+
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/chat_my_image_view"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:src="@drawable/app_icon"
+                    app:siBorderWidth="4dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:siBorderColor="@color/chat_gray_color"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerCrop"
+                    app:siRadius="@dimen/_5sdp"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/time_ago_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25/12/2017 800 pm"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:textColor="@color/darker_gray"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/proxima_nova_regular" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+     <!--   <com.github.siyamed.shapeimageview.RoundedImageView
+            android:id="@+id/chat_my_image_view"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginLeft="@dimen/_35sdp"
+            android:layout_marginRight="@dimen/_45sdp"
+            android:src="@drawable/app_icon"
+            app:siBorderWidth="4dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:siBorderColor="@color/chat_gray_color"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
+            app:siRadius="@dimen/_5sdp"
+            android:visibility="gone"/>-->
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

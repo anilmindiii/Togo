@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Select Status"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_16sdp"/>
+
+        <ImageView
+            android:id="@+id/cancel_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/reject_ico"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:tint="@color/colorWhite"
+            android:layout_marginRight="@dimen/_10sdp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ly_pickup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/tv_pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item picked"
+            android:gravity="center"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_centerVertical="true"
+            android:textColor="@color/mdtp_dark_gray"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_ico"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ly_out_for_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/tv_out_for_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out for delivery"
+            android:gravity="center"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_centerVertical="true"
+            android:textColor="@color/mdtp_dark_gray"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_out_for_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_ico"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ly_delivered"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginLeft="@dimen/_16sdp">
+
+        <TextView
+            android:id="@+id/tv_delivered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivered"
+            android:gravity="center"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:layout_centerVertical="true"
+            android:textColor="@color/mdtp_dark_gray"
+            android:textSize="@dimen/_14sdp"/>
+
+        <ImageView
+            android:id="@+id/iv_delivered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_ico"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginLeft="@dimen/_45sdp"
+        android:layout_marginRight="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/continue_btn_bg"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="@drawable/continue_btn_text_color"
+        android:textSize="@dimen/textNormalSize" />
+
+</LinearLayout>

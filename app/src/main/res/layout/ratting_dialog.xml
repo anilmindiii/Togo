@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner_white_wt_gray_st_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:id="@+id/iv_cancal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/close_ico"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/tv_review_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14sdp"
+                android:text="Give Review"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/colorWhite"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:id="@+id/ly_horrible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_horrible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_inactive_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_horrible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/mdtp_dark_gray"
+                    android:text="Horrible"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_bad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_inactive_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/mdtp_dark_gray"
+                    android:text="Bad"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_inactive_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/mdtp_dark_gray"
+                    android:text="Average"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_inactive_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/mdtp_dark_gray"
+                    android:text="Good"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_exellent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_exellent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_inactive_ico"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_exellent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/mdtp_dark_gray"
+                    android:text="Exellent"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_margin="@dimen/_2sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_give_ratting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Please give rating"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_write_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Write your review"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <EditText
+            android:id="@+id/ed_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_35sdp"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@null"
+            android:maxLength="100"
+            android:hint="Type here..."
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/mdtp_dark_gray"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@color/mdtp_light_gray"/>
+
+        <TextView
+            android:id="@+id/tv_give_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Please give review"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginLeft="@dimen/_45sdp"
+            android:layout_marginRight="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/continue_btn_bg"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@drawable/continue_btn_text_color"
+            android:textSize="@dimen/textNormalSize" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

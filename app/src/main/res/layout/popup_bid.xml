@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/veichal_type_pop_up_bg"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:gravity="center"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/haderTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bid Price"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textLeargeSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancelLay"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:gravity="right|center"
+                android:paddingRight="@dimen/_8sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/close_ico" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/veichal_type_pop_dn_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:text="Enter your price"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/textLeargeSize" />
+
+            <EditText
+                android:id="@+id/popPriceTxt"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:textAlignment="center"
+                android:textSize="@dimen/textLeargeSize" />
+
+            <Button
+                android:id="@+id/applyBtn"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/continue_btn_bg"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:text="@string/apply"
+                android:textAllCaps="false"
+                android:textColor="@drawable/continue_btn_text_color"
+                android:textSize="@dimen/textLeargeSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/popProgressBar"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Togo</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="user_type">Select User Type</string>
+    <string name="customer">Customer</string>
+    <string name="courior">Courier</string>
+    <string name="continueBtnTxt">Continue</string>
+    <string name="email_id">Email id</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_with_facebook">Login With Facebook</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="address">Address</string>
+    <string name="upload_id_card">Upload Id Card</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="text_take_photo">Take Photo</string>
+    <string name="text_chose_gellery">From Gallery</string>
+    <string name="text_add_photo">Add Photo</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="placeApiKey">AIzaSyCJ9QjanZEeNZWQodI_fCttEZABP_6cg_w</string>
+    <string name="new_post">New Post</string>
+    <string name="my_post">My Post</string>
+    <string name="my_task">My Task</string>
+    <string name="notification">Notifications</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="term">Terms &amp; Conditions</string>
+
+    <string name="facebook_app_id">290990368104524</string>
+    <string name="fb_login_protocol_scheme">fb290990368104524</string>
+
+    <string name="gps_not_enable">GPS not enable...</string>
+    <string name="do_you_want_to_enable">GPS is disabled please enable first.</string>
+    <string name="no_internet_found">No internet found</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="development_mode">On Development Mode....</string>
+    <string name="pending">Pending</string>
+    <string name="apply">Apply</string>
+    <string name="completed">Completed</string>
+    <string name="you_have_not_added_bank_account_yet_nplease_add">You have not added bank account yet,\nPlease add</string>
+    <string name="you_don_t_have_any_request_yet">You don\'t have any request yet.</string>
+    <string name="update_profile">Profile Updated Successfully</string>
+    <string name="cancel">Cancel</string>
+    <string name="na">N/A</string>
+    <string name="limite_title">Title should be not more than 50 characters</string>
+    <string name="details_limite">Deliver details should be not more than 200 characters</string>
+    <string name="review_limite">Review should be not more than 100 characters</string>
+    <string name="send_email">Send email</string>
+    <string name="you_don_t_have_any_notification_yet">You don\'t have any notification yet</string>
+    <string name="no_review_found">No review found</string>
+    <string name="delete">Delete</string>
+    <string name="upload_id_card_to_access_further_features">Upload id card to access further features</string>
+    <string name="done">Done</string>
+    <string name="price_you_re_willing_to_pay">Price you\'re willing to pay</string>
+    <string name="please_enter_you_registered_email_id_to_get_password">Please enter you registered email id to get password</string>
+</resources>

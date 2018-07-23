@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/mainLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:id="@+id/iv_back_press"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/back_ico"
+                android:padding="@dimen/_8sdp"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/mdtp_white"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/ly_main_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/card_ico"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cardholder Name"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                    <EditText
+                        android:id="@+id/cardHolderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:inputType="text"
+                        android:textSize="@dimen/_12sdp"
+                        android:imeOptions="actionNext"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Card Number   "
+                            android:textColor="@color/mdtp_light_gray"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_14sdp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+
+                        <EditText
+                            android:id="@+id/cardNum1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:maxLength="4"
+                            android:maxLines="1"
+                            android:padding="@dimen/_4sdp"
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12sdp"
+                            android:imeOptions="actionNext"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                            android:layout_weight="1"/>
+
+
+                        <EditText
+                            android:id="@+id/cardNum2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:maxLength="4"
+                            android:maxLines="1"
+                            android:inputType="number"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12sdp"
+                            android:imeOptions="actionNext"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                            android:layout_weight="1"/>
+
+
+                        <EditText
+                            android:id="@+id/cardNum3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:maxLength="4"
+                            android:maxLines="1"
+                            android:padding="@dimen/_4sdp"
+                            android:inputType="number"
+                            android:textSize="@dimen/_12sdp"
+                            android:imeOptions="actionNext"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                            android:layout_weight="1"/>
+
+
+                        <EditText
+                            android:id="@+id/cardNum4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:maxLength="4"
+                            android:maxLines="1"
+                            android:padding="@dimen/_4sdp"
+                            android:inputType="number"
+                            android:layout_gravity="center"
+                            android:imeOptions="actionNext"
+                            android:gravity="center"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expiry date"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_14sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                            android:padding="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp"
+                            android:hint="mm/yy"
+                            android:layout_gravity="center"
+                            android:gravity="center|left" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Card code"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:fontFamily="@font/proxima_nova_regular"
+                            android:textSize="@dimen/_14sdp"
+                            />
+
+                        <EditText
+                            android:id="@+id/ed_cvv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_5sdp"
+                            android:hint="CVV"
+                            android:maxLength="4"
+                            android:textSize="@dimen/_12sdp"
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:layout_gravity="center"
+                            android:gravity="center|left"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/pay_from_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/continue_btn_bg"
+                    android:fontFamily="@font/proxima_nova_semibold"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/continue_btn_text_color"
+                    android:textSize="@dimen/textMediamSize" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/AlertDialog.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

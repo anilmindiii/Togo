@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_75sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_7sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/image_opponents"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_gravity="center"
+            app:siBorderColor="@color/darker_gray"
+            app:siBorderWidth="0.5dp"
+            android:src="@drawable/splash_logo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/opponent_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:maxLines="1"
+                android:text="Anil chourasiya hsdgsdfsydfsydfsydsf"
+                android:layout_marginRight="@dimen/_70sdp"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:textSize="@dimen/_13sdp"/>
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/mdtp_light_gray"
+                android:maxLines="1"
+                android:text="Title"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/last_meassage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="this is last msg showing here"
+                android:textColor="@color/mdtp_light_gray"
+                android:maxLines="1"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="@dimen/_60sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mdtp_light_gray"
+        android:maxLines="1"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:layout_alignParentRight="true"
+        android:text="12/21/2011 23:32"
+        android:fontFamily="@font/montserrat_regular"
+        android:textSize="@dimen/_9sdp"/>
+
+</RelativeLayout>

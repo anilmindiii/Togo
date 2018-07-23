@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:background="@color/colorPrimaryDark">
+
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/back_ico"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Title"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textLeargeSize" />
+
+        <ImageView
+            android:id="@+id/tabRightIcon"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/plus_btn_ico"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/map_icon"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:src="@drawable/destination_map"
+            android:tint="@color/colorWhite"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/reqLay"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/request_bg"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/reqTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/proxima_nova_bold"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textTabSize" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

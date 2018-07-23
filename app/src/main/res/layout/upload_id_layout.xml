@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorBtn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload ID Card"
+            android:textSize="@dimen/textMediamSize"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_centerInParent="true"/>
+
+
+        <ImageView
+            android:id="@+id/close_popup"
+            android:layout_width="@dimen/_27sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:src="@drawable/cancel_symbol_inside_a_circle"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/_10sdp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_id_card_to_access_further_features"
+        android:textSize="@dimen/textMediamSize"
+        android:layout_margin="@dimen/_10sdp"
+        android:gravity="center"
+        android:textColor="@color/mdtp_light_gray"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:id="@+id/idCardLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".85"
+            android:background="@drawable/id_bg"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/idIcon"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:src="@drawable/id_card_ico" />
+
+            <View
+                android:id="@+id/divId"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/idIcon"
+                android:layout_toRightOf="@id/idIcon"
+                android:background="@color/colorDivider" />
+
+            <TextView
+                android:id="@+id/idTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@id/divId"
+                android:layout_toRightOf="@id/divId"
+                android:background="@null"
+                android:fontFamily="@font/proxima_nova_regular"
+                android:hint="@string/upload_id_card"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorTextHint"
+                android:textSize="@dimen/textNormalSize" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight=".15"
+            android:background="@color/colorBtn"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/attachment_ico" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/continue_btn_bg"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@drawable/continue_btn_text_color"
+        android:textSize="@dimen/textLeargeSize" />
+
+</LinearLayout>

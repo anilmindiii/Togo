@@ -1,0 +1,572 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.togocourier.ui.PaymentFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/back_ico"
+            android:padding="@dimen/_8sdp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Info"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/mdtp_white"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_centerInParent="true"/>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btn_card"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@drawable/blue_left_round"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="card"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textNormalSize" />
+
+        <Button
+            android:id="@+id/btn_bank"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:background="@drawable/white_right_round"
+            android:fontFamily="@font/proxima_nova_regular"
+            android:text="Bank Account"
+            android:textAllCaps="false"
+            android:textColor="@color/mdtp_light_gray"
+            android:textSize="@dimen/textNormalSize" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ly_main_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card_ico"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cardholder Name"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Card Number   "
+                        android:textColor="@color/mdtp_light_gray"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                        android:layout_weight="1"/>
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                        android:layout_weight="1"/>
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                        android:layout_weight="1"/>
+
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expairy date"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expairy date"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/signInBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/continue_btn_bg"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:text="Pay $165"
+                android:textAllCaps="false"
+                android:textColor="@drawable/continue_btn_text_color"
+                android:textSize="@dimen/textMediamSize" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/ly_main_add_bank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bank_ico"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Name"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Birth"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:textColor="@color/mdtp_light_gray"
+                            android:background="@drawable/rounded_corner_white_wt_gray_st_bg" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/down_arrow_ico"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_alignParentRight="true"
+                            android:tint="@color/mdtp_light_gray"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="State"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:fontFamily="@font/proxima_nova_regular"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/mdtp_light_gray"
+                        android:background="@drawable/rounded_corner_white_wt_gray_st_bg"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Postal Code"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:inputType="number"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SS_Last"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Routing Number"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textSize="@dimen/_14sdp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/mdtp_light_gray"
+                    android:background="@drawable/rounded_corner_white_wt_gray_st_bg"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/continue_btn_bg"
+                android:fontFamily="@font/proxima_nova_semibold"
+                android:text="PAY $165"
+                android:textAllCaps="false"
+                android:textColor="@drawable/continue_btn_text_color"
+                android:textSize="@dimen/textMediamSize" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

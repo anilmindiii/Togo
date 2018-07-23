@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.togocourier">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.togocourier.util.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.togocourier.ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.togocourier.ui.activity.UserSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" />
+        <activity
+            android:name="com.togocourier.ui.activity.SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.togocourier.ui.activity.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <service android:name="com.togocourier.fcm_services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.togocourier.fcm_services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/placeApiKey" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.togocourier.service.MyLocationService" />
+
+        <activity android:name="com.togocourier.ui.activity.HomeActivity" >
+
+            <intent-filter>
+                <action android:name="ChatActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity android:name="com.togocourier.ui.activity.customer.AddPostActivity" />
+        <activity android:name="com.togocourier.ui.activity.PostDetailsActivity" />
+        <activity android:name="com.togocourier.ui.activity.customer.AllRequestActivity" />
+        <activity android:name="com.togocourier.ui.activity.customer.CustmorPaymentActivity" />
+        <activity android:name="com.togocourier.ui.activity.courier.CourierPaymentActivity" />
+        <activity
+            android:name="com.togocourier.ui.activity.customer.MapActivity"
+            android:label="AIzaSyCJ9QjanZEeNZWQodI_fCttEZABP_6cg_w" />
+        <activity android:name="com.togocourier.ui.activity.ReviewLIstActivity" />
+        <activity
+            android:name="com.togocourier.ui.activity.ForgotPassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCustomTheme" />
+        <activity android:name="com.togocourier.ui.activity.AboutUsActivity" />
+        <activity android:name="com.togocourier.ui.activity.TermConditionActivity" />
+
+        <activity android:name="com.togocourier.ui.activity.ChatActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.togocourier.ui.activity.courier.BankInfoActivity" />
+        <activity android:name="com.togocourier.ui.activity.courier.NotificationActivity" />
+        <activity android:name="com.togocourier.ui.activity.WelcomeActivity" />
+        <activity android:name="com.togocourier.ui.activity.welcomeActivityCourier"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#2564b0</color>
+    <color name="colorAccent">#2564b0</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorBtn">#f17204</color>
+    <color name="colorDivider">#c0c0c0</color>
+    <color name="colorTextHint">#626262</color>
+    <color name="colorIdBgStroke">#e6e5e5</color>
+    <color name="colorFbBtn">#303F9F</color>
+    <color name="colorgoogleBtn">#d34836</color>
+    <color name="colorAddPostTextHint">#5195e9</color>
+    <color name="colorGreen">#048124 </color>
+    <color name="darker_gray">#aaa</color>
+    <color name="v_gray">#f2f2f2</color>
+    <color name="chat_gray_color">#c0c0c0</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/colorBtn</item>
+        <item>@color/colorBtn</item>
+        <item>@color/colorBtn</item>
+        <item>@color/colorBtn</item>
+        <item>@color/colorBtn</item>
+        <item>@color/colorBtn</item>
+    </array>
+
+</resources>
