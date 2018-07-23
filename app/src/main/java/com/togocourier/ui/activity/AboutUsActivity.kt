@@ -27,6 +27,7 @@ class AboutUsActivity : AppCompatActivity() {
 
         back.setOnClickListener {
             onBackPressed()
+
         }
     }
 
