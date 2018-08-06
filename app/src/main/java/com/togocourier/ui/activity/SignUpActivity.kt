@@ -63,6 +63,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
     private var fullName:String = ""
     private var profileImg:String = ""
     private var uID:String = ""
+    private var firebaseToken:String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,6 +90,8 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
 
             }
         })
+
+        firebaseToken = FirebaseInstanceId.getInstance().token.toString();
 
     }
 
@@ -513,7 +516,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                     params.put("userType", PreferenceConnector.readString(this@SignUpActivity, PreferenceConnector.USERTYPE, ""))
                     //    params.put("contactNo", PreferenceConnector.readString(SignUpActivity.this, PreferenceConnector.USERNO, ""));
                     params.put("deviceType", "2")
-                    params.put("deviceToken", FirebaseInstanceId.getInstance().token.toString())
+                    params.put("deviceToken", firebaseToken)
                     params.put("socialId", "")
                     params.put("socialType", "")
                     params.put("email", emailTxt.text.toString())
@@ -614,7 +617,7 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
         user.uid = uID
         user.email = email
         user.name = name
-        user.firebaseToken = FirebaseInstanceId.getInstance().token.toString()
+        user.firebaseToken = firebaseToken
         user.profilePic = image
 
         database.child(Constant.ARG_USERS)

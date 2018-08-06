@@ -1,11 +1,13 @@
 package com.togocourier.fcm_services
 
+import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.media.RingtoneManager
+import android.os.Build
 import android.support.v4.app.NotificationCompat
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -36,7 +38,13 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         var receiveById = data?.get("receiveById")
         var type = data?.get("type")
         var title = data?.get("title")
-        var message = data?.get("notiMsg")
+        var message = data?.get("body")
+
+        if(message.equals("")){
+
+            var message = data?.get("notiMsg")
+        }
+
         var postId = data?.get("postId")
         var requestId = data?.get("requestId")
         var sentById = data?.get("sentById")
@@ -50,7 +58,40 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
 
-        val pendingIntent = PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_ONE_SHOT)
+        val pendingIntent = PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_ONE_SHOT)
+        val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+
+        val CHANNEL_ID = "my_channel_01"// The id of the channel.
+        val name = "Abc"// The user-visible name of the channel.
+        val importance = NotificationManager.IMPORTANCE_HIGH
+        var mChannel: NotificationChannel? = null
+
+
+        val notificationBuilder = NotificationCompat.Builder(this, CHANNEL_ID)
+                .setContentTitle("TOGO")
+                .setContentText(message)
+                .setAutoCancel(true)
+                .setSound(defaultSoundUri)
+                .setContentIntent(pendingIntent)
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            notificationBuilder.setSmallIcon(R.drawable.app_icon)
+            notificationBuilder.color = resources.getColor(R.color.colorPrimary)
+        } else {
+            notificationBuilder.setSmallIcon(R.drawable.app_icon)
+        }
+
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mChannel = NotificationChannel(CHANNEL_ID, name, importance)
+            notificationManager.createNotificationChannel(mChannel)
+
+        }
+        notificationManager.notify(5, notificationBuilder.build())
+
+
+       /* val pendingIntent = PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_ONE_SHOT)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.app_icon)
@@ -60,7 +101,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setSound(defaultSoundUri)
                 .setContentIntent(pendingIntent)
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        notificationManager.notify(5, notificationBuilder.build())
+        notificationManager.notify(5, notificationBuilder.build())*/
     }
 
     private fun sendChatNotification(data: Map<String, String>) {
@@ -82,9 +123,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         intent.putExtra("title", title)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
-        val pendingIntent = PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_ONE_SHOT)
-        val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
-        val notificationBuilder = NotificationCompat.Builder(this)
+      /*  val pendingIntent = PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_ONE_SHOT)
+        val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)*/
+       /* val notificationBuilder = NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.app_icon)
                 .setContentTitle(ChatTitle)
                 .setContentText(message)
@@ -93,5 +134,53 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setContentIntent(pendingIntent)
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         notificationManager.notify(5, notificationBuilder.build())
+    */
+        /*................................................................*/
+
+        val pendingIntent = PendingIntent.getActivity(applicationContext, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_ONE_SHOT)
+        val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+
+        val CHANNEL_ID = "my_channel_01"// The id of the channel.
+        val name = "Abc"// The user-visible name of the channel.
+        val importance = NotificationManager.IMPORTANCE_HIGH
+        var mChannel: NotificationChannel? = null
+
+
+        val notificationBuilder = NotificationCompat.Builder(this, CHANNEL_ID)
+                .setContentTitle(ChatTitle)
+                .setContentText(message)
+                .setAutoCancel(true)
+                .setSound(defaultSoundUri)
+                .setContentIntent(pendingIntent)
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            notificationBuilder.setSmallIcon(R.drawable.app_icon)
+            notificationBuilder.color = resources.getColor(R.color.colorPrimary)
+        } else {
+            notificationBuilder.setSmallIcon(R.drawable.app_icon)
+        }
+
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            mChannel = NotificationChannel(CHANNEL_ID, name, importance)
+            notificationManager.createNotificationChannel(mChannel)
+
+        }
+        notificationManager.notify(5, notificationBuilder.build())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

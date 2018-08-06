@@ -42,12 +42,12 @@
             android:theme="@style/MyCustomTheme"
             android:windowSoftInputMode="stateHidden|adjustPan" />
 
-        <service android:name="com.togocourier.fcm_services.MyFirebaseMessagingService">
+        <service android:name=".fcm_services.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.togocourier.fcm_services.MyFirebaseInstanceIDService">
+        <service android:name=".fcm_services.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>

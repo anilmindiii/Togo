@@ -89,6 +89,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener  ,
     var mGoogleSignInClient : GoogleSignInClient?= null
 
     var address:String = ""
+    var firebaseToken:String = ""
 
     private var gson = Gson()
 
@@ -131,6 +132,8 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener  ,
             RemPreferenceConnector.writeString(this, RemPreferenceConnector.WELCOMESCREENSHOW_COURIER, "save_cust")
 
         }
+
+        firebaseToken = FirebaseInstanceId.getInstance().token.toString();
     }
 
     private fun initializeView() {
@@ -299,7 +302,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener  ,
                     params.put("password", pwdTxt.text.toString())
                     params.put("userType", userType)
                     params.put("deviceType", "2")
-                    params.put("deviceToken", FirebaseInstanceId.getInstance().token.toString())
+                    params.put("deviceToken", firebaseToken)
                     return params
                 }
             }
@@ -371,7 +374,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener  ,
             email = account?.email.toString()
             profileImg =   account?.photoUrl.toString()
             var socialId =    account?.id.toString()
-            var deviceToken = FirebaseInstanceId.getInstance().token.toString()
+            var deviceToken = firebaseToken
            // doSocialRegistration(this, name, email, "", socialId, "google", profileImg, "")
             doRegistration(fullName,email,socialId,"gmail",profileImg,deviceToken)
 
@@ -431,7 +434,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener  ,
                         val lastname = `object`.getString("last_name")
                         val fullname = firstname + " " + lastname
                         val profileImage = "https://graph.facebook.com/$sSocialId/picture?type=large"
-                        val deviceToken:String = FirebaseInstanceId.getInstance().token.toString()
+                        val deviceToken:String = firebaseToken
                         val params = HashMap<String, String>()
                         params.put("deviceToken",deviceToken)
 
@@ -714,7 +717,7 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener  ,
         user.uid = uID
         user.email = email
         user.name = name
-        user.firebaseToken = FirebaseInstanceId.getInstance().token.toString()
+        user.firebaseToken = firebaseToken
         user.profilePic = image
 
         database.child(Constant.ARG_USERS)

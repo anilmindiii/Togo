@@ -72,7 +72,7 @@ object Constant {
     val baseWebViewUrl = "http://drive.google.com/viewerng/viewer?embedded=true&url="
 
     val BASE_URL = "http://togocouriers.com/index.php/service/"// LIVE SERVER
-   // val BASE_URL = "http://togocouriers.com/dev-toogo/index.php/service/" //DEV SERVER
+    //val BASE_URL = "http://togocouriers.com/dev-toogo/index.php/service/" //DEV SERVER
 
     val Registration_Url ="registration/userRegistration"
     val Log_In_Url ="registration/userLogin"
